@@ -13,10 +13,11 @@
 
             <% if(site.pages){ %>
             <% site.pages.each(function (page){ %>
+                <% if(page.title !== '404') { %>
             <a class="a-block drawer-menu-item <%= is_current(page.path) && 'active' %>" href="<%= config.root + page.path %>">
-                <%= page.title %>
+                    <%= page.title %>
             </a>
-            <% });} %>
+            <% } });} %>
 
             <% if (theme.rss) { %>
             <a class="a-block drawer-menu-item" href="<%= config.root + theme.rss %>">

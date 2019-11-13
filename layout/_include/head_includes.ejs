@@ -3,6 +3,9 @@
 <% if (theme.favicon || config.favicon){ %>
 <link rel="icon" href="<%- config.favicon ? config.favicon : theme.favicon %>">
 <% } %>
+<% if (theme.valine) { %>
+<script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<% } %>
 <script src="<%- url_for('js/loadCSS.js') %>"></script>
 <script>
     loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");

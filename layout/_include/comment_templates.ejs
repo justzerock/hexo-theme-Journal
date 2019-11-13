@@ -3,7 +3,9 @@
     <small><%= __('CommentsDisabled') %></small>
 </p>
 <% } else { %>
-<% if(theme.disqus){ %>
+<% if(theme.valine){ %>
+<div id="vcomments"></div>
+<% } else if(theme.disqus){ %>
 <div class="post-comment-wrapper">
     <div id="disqus_thread"></div>
 </div>

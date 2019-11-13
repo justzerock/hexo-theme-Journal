@@ -1,4 +1,12 @@
-<% if(theme.disqus){ %>
+<% if(theme.valine){ %>
+<script>
+new Valine({
+    el: '#vcomments',
+    appId: '<%= config.leancloud.app_id %>',
+    appKey: '<%= config.leancloud.app_key %>'
+})
+</script>
+<% } else if(theme.disqus){ %>
 <script>
     var disqus_shortname = '<%= theme.disqus %>';
     var disqus_config = function () {
